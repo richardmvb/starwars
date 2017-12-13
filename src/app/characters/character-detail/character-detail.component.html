@@ -1,0 +1,40 @@
+<mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+<mat-card *ngIf="character">
+  <mat-card-title>
+     {{character.name}}
+  </mat-card-title>
+  <mat-card-content>
+    <mat-card *ngIf="characterSpecie">
+      <mat-card-title>
+        Specie:
+      </mat-card-title>
+      <mat-card-content>
+        <p>{{characterSpecie}}</p>
+      </mat-card-content>
+    </mat-card>
+    <br>
+    <mat-chip-list class="mat-chip-list-stacked">
+      <mat-chip selected="true" [color]="primary">
+        <strong>Birth year:</strong> {{character.birth_year | uppercase}}
+      </mat-chip>
+      <mat-chip selected="true" [color]="primary">
+        <strong>Eye color:</strong> {{character.eye_color | uppercase}}
+      </mat-chip>
+      <mat-chip selected="true" [color]="primary">
+        <strong>Gender:</strong> {{character.gender | uppercase}}
+      </mat-chip>
+      <mat-chip selected="true" [color]="primary">
+        <strong>Hair color:</strong> {{character.hair_color | uppercase}}
+      </mat-chip>
+      <mat-chip selected="true" [color]="primary">
+        <strong>Height:</strong> {{character.height | uppercase}}
+      </mat-chip>
+      <mat-chip selected="true" [color]="primary">
+        <strong>Mass:</strong> {{character.mass | uppercase}}
+      </mat-chip>
+      <mat-chip selected="true" [color]="primary">
+        <strong>Skin color:</strong> {{character.skin_color | uppercase}}
+      </mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+</mat-card>

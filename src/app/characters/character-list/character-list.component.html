@@ -1,0 +1,7 @@
+<mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+<mat-card *ngFor="let character of characters">
+  <mat-card-title>{{character.name}}</mat-card-title>
+  <mat-card-content>
+    <button mat-button (click)="seeCharacterDetails(character)">See details</button>
+  </mat-card-content>
+</mat-card>

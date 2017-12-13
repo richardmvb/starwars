@@ -7,8 +7,8 @@ describe('starwars App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display icc text msg', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('Test for ICC, make by Richard Matheus.');
   });
 });

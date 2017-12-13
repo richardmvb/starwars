@@ -1,0 +1,7 @@
+<mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+<mat-card *ngFor="let startship of starships">
+  <mat-card-title>{{startship.name}}</mat-card-title>
+  <mat-card-content>
+    <button mat-button (click)="seeStarshipDetails(startship)">See details</button>
+  </mat-card-content>
+</mat-card>

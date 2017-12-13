@@ -1,0 +1,28 @@
+<mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+<mat-card *ngIf="starship">
+  <mat-card-title>
+     {{starship.name}}
+  </mat-card-title>
+  <mat-card-content>
+    <mat-card *ngIf="pilotsOfStarship">
+      <mat-card-title>
+        Pilots ({{numberOfPilots}}):
+      </mat-card-title>
+      <mat-card-content>
+        <p *ngFor="let pilot of pilotsOfStarship">{{pilot.name}}</p>
+      </mat-card-content>
+    </mat-card>
+    <br>
+    <mat-chip-list class="mat-chip-list-stacked">
+      <mat-chip selected="true" [color]="primary">
+        <strong>Model:</strong> {{starship.model | uppercase}}
+      </mat-chip>
+      <mat-chip selected="true" [color]="primary">
+        <strong>Manufacturer:</strong> {{starship.manufacturer | uppercase}}
+      </mat-chip>
+      <mat-chip selected="true" [color]="primary">
+        <strong>Length:</strong> {{starship.length | uppercase}}
+      </mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+</mat-card>
