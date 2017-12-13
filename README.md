@@ -1,6 +1,7 @@
 # Starwars
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
+And is a test for a job at ICC.
 
 ## Install dependencies
 
